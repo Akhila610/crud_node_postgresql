@@ -6,6 +6,6 @@ Connecting nodejs with postgresql
 
 2  Go to backend folder 
        npm install  - this will install all needed modules and packages need for this project .
-        run app.js - main js file . 
-        server running in port 8080 
+         1 . run app.js - main js file . 
+        2  . server running in port 8080 
     
