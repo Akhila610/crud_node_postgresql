@@ -2,18 +2,18 @@ const Pool = require('pg').Pool
 const bcrypt = require('bcrypt');
 const pool = new Pool({
   user: 'postgres',
-  host: 'with your psql host',
-  database: 'dbname',
-  password: 'password',
+  host: 'localhost',
+  database: 'userdatabase',
+  password: 'akhila@123',
   port: 5432,
 })
 
 const pgp = require('pg-promise')();
 const db = pgp({
   user: 'postgres',
-  host: 'with your psql host',
-  database: 'dbname',
-  password: 'password',
+  host: 'localhost',
+  database: 'userdatabase',
+  password: 'akhila@123',
   port: 5432,
 });
 

@@ -64,12 +64,7 @@ passport.deserializeUser((id, done) => {
     })
 });
 
-/*(app.post('/login',
-  passport.authenticate('local',{
-                                  successRedirect: '/success',
-                                  failureRedirect: '/login?failed=true'}
-                        )
-);*/
+
 
 app.post('/login', (req, res, next) => {
   const resultJs = {};
@@ -110,19 +105,13 @@ app.post('/login', (req, res, next) => {
 });
 const router = express.Router();
 
-/*/ Login route
-/router.post('/login', passport.authenticate('local', {
-  successRedirect: '/dashboard', // Redirect to a protected page on success
-  failureRedirect: '/login',    // Redirect to the login page on failure
-  failureFlash: true,
-}));
-
-// Logout route
-router.get('/logout', (req, res) => {
-  req.logout();
-  res.redirect('/');
+app.post('/logout', (request, response) => {
+  console.log(`logout request....`);
+  request.session.maxAge = 0
+  request.session = null;
+  response.send("success");
 });
-module.exports = router;*/
+
 app.get('/', (request, response) => {
     response.send("test backend url")
   })
